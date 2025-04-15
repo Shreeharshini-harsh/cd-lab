@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    char str[100], old_char, new_char;
+    int i;
+
+  
+    printf("Enter a string: ");
+    scanf(" %[^\n]", str);
+
+    getchar();
+
+    printf("Enter the character to replace: ");
+    scanf("%c", &old_char);  // using %c to read a single character
+
+    getchar();  
+
+    printf("Enter the new character: ");
+    scanf("%c", &new_char);
+
+    
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == old_char) {
+            str[i] = new_char;  
+        }
+    }
+
+ 
+    printf("Modified string: %s\n", str);
+
+    return 0;
+}
